@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--
+Developer: Poorvaja Sathasivam
+Project: Student Enrolment Form using the JPDB API - 2022
+-->
+<html>
+    <head>
+        <title> Student Enrolment Form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"
+              href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script
+        src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    
+    <body>
+        <div class="container">
+            <div class="page-header">
+            <h2>Student Enrolment Form using JPDB API</h2>
+            <form id="studForm" method="get">
+                <!-- 1. Student Roll No -->
+                <div class="form-group">
+                    <span><label for="studId">Student Roll Number:</label> <label oid="studIdMsg">
+                        </label></span> 
+                    <input type="text" class="form-control" onchange="getStudent()" name="studId" id="studId"
+                           placeholder="Enter Student's Roll Number" required >
+                <!-- 2. Student Full Name -->
+                </div>
+                <div class="form-group">
+                    <label for="studName">Student Full Name:</label>
+                    <input type="text" class="form-control" id="studName"
+                           placeholder="Enter Student's Full Name" name="studName">
+                </div>
+                <!-- 3. Student Class -->
+                <div class="form-group">
+                    <label for="studEmail">Class:</label>
+                    <input type="text" class="form-control" id="studClass"
+                           placeholder="Enter Student's Class" name="studClass">
+                </div>
+                <!-- 4. Student Birth-date -->
+                 <div class="form-group">
+                    <label for="studDob">Birth-date:</label>
+                    <input type="date" class="form-control" id="studDob"
+                           placeholder="dd/mm/yyyy" name="studDob">
+                </div>
+                <!-- 5.Student Address -->
+                  <div class="form-group">
+                    <label for="studAddress">Address:</label>
+                    <input type="text" class="form-control" id="studAddress"
+                           placeholder="Enter Student's address" name="studAddress">
+                </div>
+                <!-- 5.Student Enrolment Date -->
+                  <div class="form-group">
+                    <label for="studEnrol">Enrolment Date:</label>
+                    <input type="date" class="form-control" id="studEnrol"
+                           placeholder="dd/mm/yyyy" name="studEnrol">
+                </div>
+                <!-- Save, Change and Reset buttons. -->
+                <div class="form-group text-center">
+                    <button type="button" class="btn btn-lg btn-primary" id="save" onclick="saveRecord()"  >Save</button>
+                    <button type="button" class="btn btn-lg btn-primary" id="change" onclick="changeRecord()"   >Change</button>
+                    <button type="button" class="btn btn-lg btn-primary" id="reset" onclick="resetRecord()"  >Reset</button>
+                    
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
+<!-- Including the script files -->
+ <script src="http://login2explore.com/jpdb/resources/js/0.0.3/jpdb-commons.js"></script>
+ <script src="js/script.js"></script>
